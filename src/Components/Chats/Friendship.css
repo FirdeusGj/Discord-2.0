@@ -8,16 +8,39 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: #949ba447;
-    margin: 5px 0;
+    width: 90%;
+    background-color: #949ba415;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+.friendship-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.friendship-item > svg{
+    margin:0 12px;
+    height: 24px;
+}
+.friendship-item:hover{
+    background-color: #949ba436;
+    cursor: pointer;
+}
+.friendship-item > p{
+    color: #80848e;
+    margin: 0;
 }
 .friendship-section{
-    box-shadow: 0 0 10px 0 black;
+    box-shadow: 0 0 5px 0 black;
+    z-index: -5;
     height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+/* #ffffff */
 .friendship-section > div > p{
     margin: 0;
     padding: 4px 0 4px 3px;
