@@ -9,7 +9,6 @@
     justify-content: flex-start;
     align-items: center;
     width: 90%;
-    background-color: #949ba415;
     margin-top: 10px;
     border-radius: 5px;
     padding: 10px 0;
@@ -51,4 +50,21 @@
     border-radius: 4px;
     color: #80848e;
     width: 90%;
+}
+.chats-direct-messages{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    fill:#80848e;
+    color: #80848e;
+    width: 90%;
+    margin: 20px auto 10px;
+}
+.chats-direct-messages:hover{
+    fill:white;
+    color:white;
+    cursor: pointer;
+}
+.chats-direct-messages p{
+    margin: 0;
 }
