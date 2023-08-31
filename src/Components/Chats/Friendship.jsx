@@ -47,7 +47,7 @@ export default function Friendship() {
       <div className="frienship-chats">
         <div className="chats-wrapper">
           <div className="chats-direct-messages">
-            <p>Direct Messages</p>
+            <p>DIRECT MESSAGES</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="1em"
@@ -57,7 +57,12 @@ export default function Friendship() {
             </svg>
           </div>
           <div className="chats-users">
-            <Users />
+            <Users name={'Friend1'}/>
+            <Users name={'Friend2'}/>
+            <Users name={'Friend3'}/>
+            <Users name={'Friend4'}/>
+            <Users name={'Friend5'}/>
+            <Users name={'Friend6'}/>
           </div>
         </div>
       </div>

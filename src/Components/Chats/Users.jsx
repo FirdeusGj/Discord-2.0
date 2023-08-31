@@ -1,13 +1,14 @@
 import React from 'react'
 import './Users.css'
-export default function Users() {
+export default function Users({name}) {
   return (
     <div className='users'>
         <div className='users-profile'>
             <img className='users-profile-picture' src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" width={32} alt='pfp' />
+            <div className='profile-status green'></div>
         </div>
         <div className='users-name'>
-            <p>Name</p>
+            <p>{name}</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="1em"
