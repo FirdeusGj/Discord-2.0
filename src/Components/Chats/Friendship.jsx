@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Friendship.css";
 import Users from "./Users";
+import axios from "axios";
 export default function Friendship() {
+  // const [users, setUsers] = useState([]);
+  // let userInfo = []
+  // async function fetchUsers(){
+  //   for(let i = 0; i <= 9; i++){
+  //     const {data} = await axios.get(`https://randomuser.me/api/`)
+  //     userInfo.push(...data.results)
+  //   }
+  //   setUsers(userInfo)
+  //   console.log(users)
+  //   }
+  //   fetchUsers()
   return (
     <div className="friendship">
       <div className="friendship-section">
@@ -57,12 +69,9 @@ export default function Friendship() {
             </svg>
           </div>
           <div className="chats-users">
-            <Users name={'Friend1'}/>
-            <Users name={'Friend2'}/>
-            <Users name={'Friend3'}/>
-            <Users name={'Friend4'}/>
-            <Users name={'Friend5'}/>
-            <Users name={'Friend6'}/>
+            {/* {users.map(elem => (
+              <Users pfp={elem.picture.large} name={elem.name.first}/>
+            ))} */}
           </div>
         </div>
       </div>

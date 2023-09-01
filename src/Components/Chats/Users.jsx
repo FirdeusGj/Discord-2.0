@@ -1,10 +1,10 @@
 import React from 'react'
 import './Users.css'
-export default function Users({name}) {
+export default function Users({name, pfp}) {
   return (
     <div className='users'>
         <div className='users-profile'>
-            <img className='users-profile-picture' src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" width={32} alt='pfp' />
+            <img className='users-profile-picture' src={pfp} width={32} alt='pfp' />
             <div className='profile-status green'></div>
         </div>
         <div className='users-name'>
