@@ -14,10 +14,51 @@ border-radius: 50px;
     bottom: -3px;
     right: -3px;
     border-radius: 100%;
+    border: 3.3px solid #2b2d31;
 }
 .green{
     background-color: #23a55a;
-    border: 3.3px solid #2b2d31;
+}
+.red{
+    background-color: #ea3e42;
+}
+.red:before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 7px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2b2d31;
+    border-radius:3px;
+}
+.invisible{
+    background-color: #80848e;
+}
+.invisible:before{
+    content: '';
+    height: 5px;
+    width: 5px;
+    border-radius:100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2b2d31;
+    position: absolute;
+}
+.idle{
+    background-color: #eeb032;
+}
+.idle:before{
+    content: '';
+    height: 6px;
+    width: 6px;
+    border-radius:100%;
+    top: 0;
+    left: 0;
+    background-color: #2b2d31;
+    position: absolute;
 }
 .users{
     display: flex;

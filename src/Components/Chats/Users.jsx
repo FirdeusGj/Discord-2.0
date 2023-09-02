@@ -1,11 +1,11 @@
 import React from 'react'
 import './Users.css'
-export default function Users({name, pfp}) {
+export default function Users({name, pfp, status}) {
   return (
     <div className='users'>
         <div className='users-profile'>
             <img className='users-profile-picture' src={pfp} width={32} alt='pfp' />
-            <div className='profile-status green'></div>
+            <div className={`profile-status ${status}`}></div>
         </div>
         <div className='users-name'>
             <p>{name}</p>

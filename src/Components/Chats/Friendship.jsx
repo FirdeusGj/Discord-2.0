@@ -3,17 +3,24 @@ import "./Friendship.css";
 import Users from "./Users";
 import axios from "axios";
 export default function Friendship() {
-  // const [users, setUsers] = useState([]);
-  // let userInfo = []
-  // async function fetchUsers(){
-  //   for(let i = 0; i <= 9; i++){
-  //     const {data} = await axios.get(`https://randomuser.me/api/`)
-  //     userInfo.push(...data.results)
-  //   }
-  //   setUsers(userInfo)
-  //   console.log(users)
-  //   }
-  //   fetchUsers()
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    axios
+      .get("https://randomuser.me/api/?results=9")
+      .then((response) => {
+        const fetchedUsers = response.data.results;
+        setUsers(fetchedUsers);
+      })
+      .catch((error) => {
+        console.error("Error fetching random users:", error);
+      });
+  }, []);
+  const randomStatus = {
+   1: 'invisible',
+   2: 'red',
+   3: 'idle',
+   4:'green'
+  }
   return (
     <div className="friendship">
       <div className="friendship-section">
@@ -69,9 +76,17 @@ export default function Friendship() {
             </svg>
           </div>
           <div className="chats-users">
-            {/* {users.map(elem => (
-              <Users pfp={elem.picture.large} name={elem.name.first}/>
-            ))} */}
+          {users.map((elem) => {
+          const random = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
+          return (
+            <Users
+              key={elem.login.uuid}
+              pfp={elem.picture.large}
+              name={elem.name.first}
+              status={randomStatus[random]}
+            />
+          );
+        })}
           </div>
         </div>
       </div>
