@@ -1,10 +1,6 @@
-import React from 'react'
-import './Mainbody.css'
+import React from "react";
+import "./Mainbody.css";
 
 export default function Mainbody() {
-  return (
-    <div className='mainbody'>
-        mainbody
-    </div>
-  )
+  return <div className="mainbody">mainbody</div>;
 }

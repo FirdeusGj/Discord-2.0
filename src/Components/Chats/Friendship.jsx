@@ -16,11 +16,11 @@ export default function Friendship() {
       });
   }, []);
   const randomStatus = {
-   1: 'invisible',
-   2: 'red',
-   3: 'idle',
-   4:'green'
-  }
+    1: "invisible",
+    2: "red",
+    3: "idle",
+    4: "green",
+  };
   return (
     <div className="friendship">
       <div className="friendship-section">
@@ -76,17 +76,17 @@ export default function Friendship() {
             </svg>
           </div>
           <div className="chats-users">
-          {users.map((elem) => {
-          const random = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
-          return (
-            <Users
-              key={elem.login.uuid}
-              pfp={elem.picture.large}
-              name={elem.name.first}
-              status={randomStatus[random]}
-            />
-          );
-        })}
+            {users.map((elem) => {
+              const random = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
+              return (
+                <Users
+                  key={elem.login.uuid}
+                  pfp={elem.picture.large}
+                  name={elem.name.first}
+                  status={randomStatus[random]}
+                />
+              );
+            })}
           </div>
         </div>
       </div>
