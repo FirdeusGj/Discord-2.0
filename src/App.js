@@ -1,6 +1,6 @@
 import './App.css';
 import Friendship from './Components/Chats/Friendship';
-import Mainbody from './Components/Mainbody';
+import Mainbody from './Components/mainBody/Mainbody';
 import Sidebar from './Components/Sidebar/Sidebar';
 
 function App() {

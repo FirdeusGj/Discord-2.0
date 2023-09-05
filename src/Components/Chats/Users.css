@@ -16,6 +16,9 @@
   border-radius: 100%;
   border: 3.3px solid #2b2d31;
 }
+.users:hover > .users-profile > .profile-status{
+  border-color: #41444a;
+}
 .green {
   background-color: #23a55a;
 }
