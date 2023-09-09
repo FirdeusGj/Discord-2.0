@@ -1,5 +1,5 @@
 import React from "react";
-import "./Servers.css";
+import "./Servers.scss";
 
 export default function Servers({ title, tooltip }) {
   return (

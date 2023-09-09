@@ -1,12 +1,15 @@
+@mixin center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .servers {
+  @include center;
   height: 50px;
   width: 50px;
   background-color: #313338;
   border-radius: 100px;
-  display: flex;
-  align-items: center;
   fill: #36a659;
-  justify-content: center;
   font: bolder;
   transition: all 200ms ease-in-out;
 }

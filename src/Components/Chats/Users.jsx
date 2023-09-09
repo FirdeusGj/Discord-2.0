@@ -1,5 +1,5 @@
 import React from "react";
-import "./Users.css";
+import "./Users.scss";
 export default function Users({ name, pfp, status }) {
   return (
     <div className="users">

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Friendship.css";
+import "./Friendship.scss";
 import Users from "./Users";
 import axios from "axios";
 export default function Friendship() {
