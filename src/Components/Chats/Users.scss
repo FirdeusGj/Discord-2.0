@@ -1,8 +1,4 @@
-@mixin center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+@import '/src/App.scss';
 .users-profile-picture {
   border-radius: 50px;
 }
@@ -17,7 +13,7 @@
   bottom: -3px;
   right: -3px;
   border-radius: 100%;
-  border: 3.3px solid #2b2d31;
+  border: 3.3px solid $gray;
 }
 .users:hover > .users-profile > .profile-status{
   border-color: #41444a;
@@ -36,7 +32,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: #2b2d31;
+  background-color: $gray;
   border-radius: 3px;
 }
 .invisible {
@@ -50,7 +46,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #2b2d31;
+  background-color: $gray;
   position: absolute;
 }
 .idle {
@@ -63,7 +59,7 @@
   border-radius: 100%;
   top: 0;
   left: 0;
-  background-color: #2b2d31;
+  background-color: $gray;
   position: absolute;
 }
 .users {

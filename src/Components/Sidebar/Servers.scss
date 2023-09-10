@@ -1,13 +1,9 @@
-@mixin center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+@import '/src/App.scss';
 .servers {
   @include center;
   height: 50px;
   width: 50px;
-  background-color: #313338;
+  background-color: $lightGray;
   border-radius: 100px;
   fill: #36a659;
   font: bolder;

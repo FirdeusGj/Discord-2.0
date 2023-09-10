@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import Friendship from './Components/Chats/Friendship';
 import Mainbody from './Components/mainBody/Mainbody';
 import Sidebar from './Components/Sidebar/Sidebar';

@@ -1,8 +1,4 @@
-@mixin center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+@import '/src/App.scss';
 .sidebar {
   height: 100vh;
   width: 100%;
@@ -11,7 +7,7 @@
   flex-direction: column;
   max-width: 72px;
   align-items: center;
-  background: #272727;
+  background: $darkGray;
 }
 .discordLogo {
   fill: white;
@@ -23,7 +19,7 @@
   margin-top: 12px;
   height: 50px;
   width: 50px;
-  background-color: #313338;
+  background-color: $gray;
   border-radius: 100px;
   transition: all 200ms ease-in-out;
 }
@@ -55,6 +51,6 @@
 .nav__seperator {
   height: 2px;
   width: 60%;
-  background-color: #313338;
+  background-color: $lightGray;
   margin: 10px 0;
 }

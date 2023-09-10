@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,600&display=swap');
+@mixin center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+$darkGray: #272727;
+$gray: #2b2d31;
+$lightGray: #313338;
 .App{
   display: flex;
   margin: 0;
