@@ -1,5 +1,6 @@
 import React from "react";
 import "./Mainbody.scss";
+import OnlinePeople from "./OnlinePeople.jsx";
 
 export default function Mainbody() {
   return (
@@ -29,7 +30,7 @@ export default function Mainbody() {
         </div>
       </div>
       </div>
-      <div>other</div>
+      <OnlinePeople/>
     </div>
   );
 }
