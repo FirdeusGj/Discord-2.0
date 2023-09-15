@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Friendship.scss";
 import Users from "./Users";
 import axios from "axios";
-export default function Friendship() {
+export default function Friendship({getNames}) {
   const [users, setUsers] = useState([]);
   useEffect(() => {
     axios
@@ -14,7 +14,10 @@ export default function Friendship() {
       .catch((error) => {
         console.error("Error fetching random users:", error);
       });
-  }, []);
+    }, []);
+    let userNames = users.map(elem => elem.name.first)
+    // console.log(userNames.join(' '))
+    getNames(userNames)
   const randomStatus = {
     1: "invisible",
     2: "red",
