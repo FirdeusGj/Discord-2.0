@@ -1,29 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Friendship.scss";
 import Users from "./Users";
-import axios from "axios";
-export default function Friendship({getNames}) {
-  const [users, setUsers] = useState([]);
-  useEffect(() => {
-    axios
-      .get("https://randomuser.me/api/?results=9")
-      .then((response) => {
-        const fetchedUsers = response.data.results;
-        setUsers(fetchedUsers);
-      })
-      .catch((error) => {
-        console.error("Error fetching random users:", error);
-      });
-    }, []);
-    let userNames = users.map(elem => elem.name.first)
-    // console.log(userNames.join(' '))
-    getNames(userNames)
-  const randomStatus = {
-    1: "invisible",
-    2: "red",
-    3: "idle",
-    4: "green",
-  };
+export default function Friendship({usersData, userStatus}) {
   return (
     <div className="friendship">
       <div className="friendship-section">
@@ -79,14 +57,13 @@ export default function Friendship({getNames}) {
             </svg>
           </div>
           <div className="chats-users">
-            {users.map((elem) => {
-              const random = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
+            {usersData.map((elem, index) => {
               return (
                 <Users
                   key={elem.login.uuid}
                   pfp={elem.picture.large}
                   name={elem.name.first}
-                  status={randomStatus[random]}
+                  status={userStatus[index]}
                 />
               );
             })}

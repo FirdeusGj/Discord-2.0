@@ -1,8 +1,9 @@
 import React from "react";
 import "./Mainbody.scss";
 import OnlinePeople from "./OnlinePeople.jsx";
+import Users from "../Chats/Users";
 
-export default function Mainbody() {
+export default function Mainbody({userStatus, usersData}) {
   return (
     <div className="mainbody">
       <div className="mainbody-nav-wrapper">
@@ -30,7 +31,7 @@ export default function Mainbody() {
         </div>
       </div>
       </div>
-      <OnlinePeople/>
+      <OnlinePeople userStatuses={userStatus} usersDatas={usersData}/>
     </div>
   );
 }

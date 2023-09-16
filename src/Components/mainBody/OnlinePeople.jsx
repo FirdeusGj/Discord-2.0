@@ -1,8 +1,9 @@
 import React from "react";
 import "./OnlinePeople.scss";
 import Users from "../Chats/Users";
+import OnlineUsers from "./OnlineUsers";
 
-export default function OnlinePeople() {
+export default function OnlinePeople({userStatuses, usersDatas}) {
   return (
     <div className="online-people">
       <div>
@@ -12,21 +13,16 @@ export default function OnlinePeople() {
         </div>
         <div>
           <span>Online - 5</span>
-          <div>
-            <div>
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/1024px-Default_pfp.svg.png"
-                height={28}
-                alt=""
-              />
-              <h3>Name</h3>
-              <p>Status</p>
-            </div>
-            <div>
-                <p>Icon1</p>
-                <p>Icon2</p>
-            </div>
-          </div>
+          {usersDatas.map((elem, index) => {
+              return (
+                <OnlineUsers
+                  key={elem.login.uuid}
+                  pfp={elem.picture.large}
+                  name={elem.name.first}
+                  status={userStatuses[index]}
+                />
+              );
+            })}
         </div>
       </div>
     </div>
