@@ -3,13 +3,15 @@ import './OnlineUsers.scss'
 
 export default function OnlineUsers({name, pfp, status}) {
   return (
-    <div style={{display:'flex'}}>
+    <div className='onlineUsers'>
+      <div className='onlineUser'>
         <div>
             <img src={pfp} width={32}/>
         </div>
         <div>
-            <p>{name}, {status}</p>
+            <p>{name}</p>
         </div>
+      </div>
     </div>
   )
 }
