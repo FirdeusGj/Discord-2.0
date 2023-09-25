@@ -1,7 +1,6 @@
 import React from "react";
 import "./Mainbody.scss";
 import OnlinePeople from "./OnlinePeople.jsx";
-import Users from "../Chats/Users";
 
 export default function Mainbody({userStatus, usersData}) {
   return (

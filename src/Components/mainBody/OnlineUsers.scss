@@ -3,9 +3,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid rgba(128, 128, 128, 0.268);
-    border-radius:10px;
+    border-radius:5px;
     padding: 0px 10px;
+    position: relative;
+}
+.onlineUsers:before{
+    content: '';
+    position: absolute;
+    width: 98%;
+    height: 1px;
+    background-color: rgba(128, 128, 128, 0.268);
+    top: 0;
 }
 .onlineUsers:hover{
     background-color: rgba(128, 128, 128, 0.268);
@@ -13,4 +21,62 @@
 .onlineUser{
     @include center;
     gap: 1rem;
+}
+.onlineUser__buttons{
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 1rem;
+}
+.onlineUser__buttons button{
+    border:none;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $gray;
+    height: 33px;
+    width: 33px;
+    border-radius: 100%;
+    cursor: pointer;
+    position: relative;
+}
+.onlineUser__buttons button span{
+    visibility: hidden;
+    opacity: 0;
+    top: -33px;
+    color:#b5bac1;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.378);
+    font-weight: bolder;
+}
+.onlineUser__buttons button span:before{
+    content: '';
+    height: 5px;
+    width: 5px;
+    position: absolute;
+    background-color: black;
+    left: 50%;
+    bottom: -3px;
+    rotate: 45deg;
+}
+.onlineUser__buttons button:hover span{
+    visibility: visible;
+    opacity: 1;
+}
+.onlineUser
+.onlineUser__buttons button:hover{
+    background-color: $darkGray;
+}
+.onlineUser__buttons button svg{
+    fill:#b5bac1;
+    height: 14px;
+}
+.onlineUser__option{
+}
+.onlineUser__chat{
+
 }
