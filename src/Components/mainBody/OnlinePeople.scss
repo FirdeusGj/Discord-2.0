@@ -1,3 +1,39 @@
+@import '/src//App.scss';
+
 .online-people{
     width: 95%;
+}
+.onlineNumber{
+    color:#b5bac1;
+    margin: 20px 0px;
+    font-size: 12px;
+    font-weight: bolder;
+}
+.online-seperator{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.online-input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1e1f22;
+    padding: 7px 9px 7px 9px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+.online-input svg{
+    fill:#a9adb3;
+}
+.online-input input{
+    background: none;
+    width: 100%;
+    border:none;
+    font-size: 16px;
+    display: flex;
+    color:white;
+}
+.online-input input:focus{
+    outline: none;
 }

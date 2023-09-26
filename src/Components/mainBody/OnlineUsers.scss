@@ -5,13 +5,21 @@
     justify-content: space-between;
     border-radius:5px;
     padding: 0px 10px;
+    cursor: pointer;
     position: relative;
+}
+.onlineUsers:hover .onlineUser__buttons button{
+    background-color: $darkGray;
+}
+.onlineUsers:hover:before{
+    opacity: 0;
+    visibility: hidden;
 }
 .onlineUsers:before{
     content: '';
     position: absolute;
     width: 98%;
-    height: 1px;
+    height: 0.5px;
     background-color: rgba(128, 128, 128, 0.268);
     top: 0;
 }
@@ -75,8 +83,6 @@ gap: 1rem;
     fill:#b5bac1;
     height: 14px;
 }
-.onlineUser__option{
-}
-.onlineUser__chat{
-
+.onlineUser__name{
+    color:white;
 }
