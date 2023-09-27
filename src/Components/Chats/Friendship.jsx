@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./Friendship.scss";
 import Users from "./Users";
-export default function Friendship({usersData, userStatus}) {
+import { NavLink, useNavigate } from "react-router-dom";
+export default function Friendship({ usersData, userStatus }) {
+  const navigate = useNavigate();
+  useEffect(() => {
+    navigate("/");
+  }, []);
   return (
     <div className="friendship">
       <div className="friendship-section">
@@ -9,8 +14,9 @@ export default function Friendship({usersData, userStatus}) {
           <p>Find or start a conversation</p>
         </div>
       </div>
+
       <div className="friendship-items">
-        <div className="friendship-item">
+        <NavLink to="/" className="friendship-item">
           <svg viewBox="0 0 24 24">
             <g fill="none">
               <path
@@ -22,8 +28,8 @@ export default function Friendship({usersData, userStatus}) {
             </g>
           </svg>
           <p>Friends</p>
-        </div>
-        <div className="friendship-item">
+        </NavLink>
+        <NavLink to="/library" className="friendship-item">
           <svg width="24" height="24" viewBox="0 0 24 24">
             <g fill="none" fill-rule="evenodd">
               <path
@@ -33,8 +39,8 @@ export default function Friendship({usersData, userStatus}) {
             </g>
           </svg>
           <p>Library</p>
-        </div>
-        <div className="friendship-item">
+        </NavLink>
+        <NavLink to='/nitro' className="friendship-item">
           <svg width="24" height="24" viewBox="0 0 24 24">
             <path
               fill="#949ba4"
@@ -42,7 +48,7 @@ export default function Friendship({usersData, userStatus}) {
             ></path>
           </svg>
           <p>Nitro</p>
-        </div>
+        </NavLink>
       </div>
       <div className="frienship-chats">
         <div className="chats-wrapper">

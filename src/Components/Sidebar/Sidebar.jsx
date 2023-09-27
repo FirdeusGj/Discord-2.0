@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Sidebar.scss";
 import Servers from "./Servers";
+import { useNavigate } from "react-router-dom";
+
 export default function Sidebar() {
   return (
     <nav className="sidebar">

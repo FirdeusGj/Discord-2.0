@@ -7,17 +7,17 @@
 }
 .friendship-item {
   display: flex;
+  text-decoration: none;
   justify-content: flex-start;
   align-items: center;
   width: 90%;
   border-radius: 5px;
   padding: 10px 0;
-}
-.friendship-item:nth-of-type(1) {
-  margin-top: 10px;
+  margin: 1px 0;
 }
 .friendship-items {
   @include center;
+  padding-top: 10px;
   flex-direction: column;
 }
 .friendship-item > svg {
@@ -25,7 +25,7 @@
   height: 24px;
 }
 .friendship-item:hover {
-  background-color: #949ba436;
+  background-color: #949ba41c;
   cursor: pointer;
 }
 .friendship-item > p {
