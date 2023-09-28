@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./OnlinePeople.scss";
 import OnlineUsers from "./OnlineUsers";
+import { useNavigate } from "react-router-dom";
 
 export default function OnlinePeople({ userStatuses, usersDatas }) {
   const onlineUsers = userStatuses.filter(
     (online) => online !== "invisible"
   ).length;
-
+  const navigate = useNavigate()
+  useEffect(() => {
+    navigate('/')
+  }, [])
   return (
     <div className="online-people">
       <div>
@@ -25,7 +29,7 @@ export default function OnlinePeople({ userStatuses, usersDatas }) {
           {usersDatas.map((elem, index) => {
             return (
               <OnlineUsers
-                key={elem.login.uuid}
+                key={elem.id.name}
                 pfp={elem.picture.large}
                 name={elem.name.first}
                 status={userStatuses[index]}

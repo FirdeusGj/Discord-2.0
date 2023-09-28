@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./OnlineUsers.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
-export default function OnlineUsers({ name, pfp, status }) {
+export default function OnlineUsers({ name, pfp, status, key }) {
+  const navigate = useNavigate()
+  useEffect(() => {
+    navigate('/')
+  }, [])
   return (
     <>
       <NavLink to={`/${name}`} className="onlineUsers">

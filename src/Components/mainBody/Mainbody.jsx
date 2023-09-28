@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Mainbody.scss";
 import OnlinePeople from "./OnlinePeople.jsx";
+import { useNavigate } from "react-router-dom";
 
 export default function Mainbody({userStatus, usersData}) {
+  const navigate = useNavigate()
+  useEffect(() => {
+    navigate('/')
+  }, [])
   return (
     <div className="mainbody">
       <div className="mainbody-nav-wrapper">

@@ -21,6 +21,7 @@ function App() {
         console.error("Error fetching random users:", error);
       });
   }, []);
+  console.log(users)
 
   const randomStatusResult = [];
   const randomStatus = {
@@ -34,7 +35,6 @@ function App() {
     const random = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
     randomStatusResult.push(randomStatus[random]);
   }
-  
   return (
     <Router>
       <div className="App">
@@ -47,7 +47,7 @@ function App() {
               <Mainbody usersData={users} userStatus={randomStatusResult} />
             }
           />
-          <Route path="/:id" element={<UserChat />} />
+          <Route path="/:id" element={<UserChat usersData={users} />} />
         </Routes>
       </div>
     </Router>
